@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 // Imports
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
@@ -29,17 +28,20 @@ export const greetingsSlice = createSlice({
   reducers: {},
   extraReducers: {
     [fetchGreetings.pending]: (state) => {
-      state.isLoading = true;
-      state.hasError = false;
+      const state1 = state;
+      state1.isLoading = true;
+      state1.hasError = false;
     },
     [fetchGreetings.fulfilled]: (state, action) => {
-      state.greetings = action.payload;
-      state.isLoading = false;
-      state.hasError = false;
+      const state1 = state;
+      state1.greetings = action.payload;
+      state1.isLoading = false;
+      state1.hasError = false;
     },
     [fetchGreetings.rejected]: (state) => {
-      state.isLoading = false;
-      state.hasError = true;
+      const state1 = state;
+      state1.isLoading = false;
+      state1.hasError = true;
     },
   },
 });
