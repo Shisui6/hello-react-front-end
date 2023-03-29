@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectGreetings, fetchGreetings } from '../redux/greeting/greeting.js';
+import { selectGreetings, fetchGreetings } from '../redux/greeting/greeting';
 
 const Greeting = () => {
   const dispatch = useDispatch();
@@ -10,9 +10,9 @@ const Greeting = () => {
     dispatch(fetchGreetings());
   }, [dispatch]);
 
-  return ( 
+  return (
     <h1>{greeting.greeting}</h1>
   );
-}
- 
+};
+
 export default Greeting;

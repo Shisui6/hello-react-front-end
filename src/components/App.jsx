@@ -1,13 +1,10 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 
-const App = () => {
-
-  return (
-    <div id="detail">
-      <Outlet />
-    </div>
-  );
-};
+const App = () => (
+  <div id="detail">
+    <Outlet />
+  </div>
+);
 
 export default App;

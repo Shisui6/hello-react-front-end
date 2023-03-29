@@ -1,8 +1,9 @@
+/* eslint-disable no-param-reassign */
 // Imports
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 // Base URL
-const URL = `http://localhost:3000/api/v1/messages`;
+const URL = 'http://localhost:3000/api/v1/messages';
 
 export const fetchGreetings = createAsyncThunk(
   'greetings/getGreetings',
